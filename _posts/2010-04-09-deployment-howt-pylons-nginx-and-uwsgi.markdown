@@ -56,24 +56,26 @@ $ ./easy_install /path_to_the_egg/the.egg
 You should now be able to cd to <code>~/virtualenv/myapp/lib/pythonX.X/site-packages/</code> and see your egg as well as all the other libraries you installed in step 2.
 
 <strong>5. Setup the server in your Nginx config file:</strong>
-<pre><code>server {
-  listen			80;
-  server_name		www.yoursite.com yoursite.com;
-  charset			utf-8;
-  root				/path_to_your_pylons_app/public;
-  index				index.html index.htm;
-  location ~* /(img|js|iepng|css)/ {
-    root			/path_to_your_pylons_app/public;
-    expires max;
+{% highlight nginx %}
+server {
+  listen 80;
+  server_name www.yoursite.com yoursite.com;
+  charset utf-8;
+  root /path_to_your_pylons_app/public;
+  index	index.html index.htm;
+  location ~*/(img|js|iepng|css)/ {
+    root /path_to_your_pylons_app/public;
+    expires	max;
     add_header Cache-Control "public";
     break;
   }
   location / {
-    uwsgi_pass	0.0.0.0:3031;
-    include			uwsgi_params;
+    uwsgi_pass 0.0.0.0:3031;
+    include	uwsgi_params;
     uwsgi_param	SCRIPT_NAME /;
   }
-}</code></pre>
+}
+{% endhighlight %}
 
 <strong>6. Create your pylons production.ini file and start uWSGI with the path to your virtualenv as the python home dir:</strong>
 

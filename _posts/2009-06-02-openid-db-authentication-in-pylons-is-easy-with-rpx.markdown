@@ -56,7 +56,7 @@ $ mysql&gt; explain user_openid;
 | email             | varchar(200) | YES  |     | NULL    |                |
 +-------------------+--------------+------+-----+---------+----------------+</code></pre>
 So let's get started by creating a database named 'pylons_openid', and create the tables. If you already have a user table, that you plan to use, that is fine, you will just need to modify the SQLAlchemy model so your columns match up. Here are the MySQL commands to create a database and tables and a few sample users:
- 
+ 
 <script src="http://gist.github.com/122663.js"></script>
 
 One last step of preparation before moving on to Pylons: you will need a <a href="https://rpxnow.com/" target="_blank">free rpxnow account</a>, just head over to their site and sign up. Believe me, using this service takes the headache out of tying into OpenID. You will need to create an "Application" and note the API key and insert it into your development.ini file (explained in a moment)

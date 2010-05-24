@@ -19,11 +19,14 @@ Please check your Xcode installation</code></pre>
 The solution is to download the psycopg2 source, then edit the setup.py - 
 around line 426 before after <code>undef_macros[]</code> add this:
 
-<pre><code>,extra_link_args = ['-L/Developer/SDKs/MacOSX10.5.sdk/usr/lib']</code></pre>
+{% highlight python %}
+,extra_link_args = ['-L/Developer/SDKs/MacOSX10.5.sdk/usr/lib']
+{% endhighlight %}
 
 So that line will look like this:
 
-<pre><code>undef_macros=[],\
-  extra_link_args=['-L/Developer/SDKs/MacOSX10.5.sdk/usr/lib']))</code></pre>
+{% highlight python %}
+undef_macros=[], extra_link_args=['-L/Developer/SDKs/MacOSX10.5.sdk/usr/lib']))
+{% endhighlight %}
 
 That is all, running <pre class="terminal"><code>$ sudo python setup.py install</code></pre> should get it working.

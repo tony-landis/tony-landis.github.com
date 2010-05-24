@@ -160,9 +160,10 @@ ul.posts {
   }
 
   #post pre {
-    border: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     background-color: #eef;
-    padding: 0 .4em;
+    padding: .5em .4em .5em;
   }
 
   #post ul,
