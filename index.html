@@ -1,1 +1,56 @@
-testing
+---
+layout: default
+title: Tony Landis
+---
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  
+  <h1>Projects</h1>
+  <ul class="posts">
+    <li>
+      <a href="http://www.agileco.com/agilebill-open-source-billing-software.htm" title="Open Source Billing">AgileBill</a> 
+        – Open Source Billing
+    </li>
+    <li>
+      <a href="http://www.agilegallery.com" title="Fash and AJAX photo gallery">AgileGallery</a> – Flash/AJAX Photo Gallery
+    </li>
+    <li>
+      <a href="http://www.agilevoice.com" title="open source voip billing">AgileVoice</a> – Open Source VoIP Billing
+    <li>
+    <li>
+      <a href="http://github.com/tony-landis/jquery-plugins/tree/master/bullseye/">bullsEye</a> – jQuery interactive table plugin
+    </li>
+  </ul>
+  
+
+  <h1>Twitter</h1>
+  <style type="text/css" media="screen">
+    #twitters { background-color: #f2f2f2; padding:9px; font-size:77%; }
+    #twitters li {margin-bottom:8px; border-bottom:1px dotted #ccc; }
+    #twitters a {color:#777;}
+  </style>
+  <div id="twitters"></div>
+  <script src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js" type="text/javascript"></script>
+  <script type="text/javascript" charset="utf-8">
+    getTwitters('twitters', { 
+        id: 'tonylandis', 
+        clearContents: true, 
+        count: 5, 
+        withFriends: true,
+        ignoreReplies: false,
+        template: '<span class="prefix"><img height="16" width="16" src="%user_profile_image_url%" /> <a href="http://twitter.com/%user_screen_name%">%user_name%</a> said: </span> <span class="status">"%text%"</span> <span class="time"><a href="http://twitter.com/%user_screen_name%/statuses/%id%">%time%</a></span>'
+    });
+  </script>
+  <br><br>
+
+
+  <h1>Recent Comments</h1>
+  <script type="text/javascript" src="http://disqus.com/forums/tonylandis/combination_widget.js?num_items=5&hide_mods=0&color=grey&default_tab=recent&excerpt_length=2000"></script>
+  
+</div>
