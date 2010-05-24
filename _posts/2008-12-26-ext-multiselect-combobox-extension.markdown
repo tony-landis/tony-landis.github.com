@@ -1,6 +1,7 @@
 --- 
 layout: posts
 categories: code
+category: code
 title: MultiSelect ComboBox Component for Ext JS
 tags: ext plugin 
 ---
