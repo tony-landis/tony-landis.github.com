@@ -8,7 +8,7 @@ tags: jquery plugins yui date
 jQuery Plugin - YUI Calendar Selector
 =====================================
 
-I love using [jQuery](http://www.jquery.org) and use it every chance possible. However, I have yet to find a calendar plugin that fits my needs as well as the [YUI Calendar](http://developer.yahoo.com/yui/calendar/).
+I love using [jQuery](http://www.jquery.org) and do so at every chance possible. However, I have yet to find a calendar plugin that fits my needs as well as the [YUI Calendar](http://developer.yahoo.com/yui/calendar/).
 
 Frequently, I need to attach the calendar to form fields for date selection, and I didn't like introducing all the YUI CSS and JS includes into the code. Since I like the jQuery way of doing things, I decided to write a little plugin so binding the calendar popup to a form field would be this simple:
 
