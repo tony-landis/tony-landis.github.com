@@ -1,0 +1,28 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Tony Landis</title>
+ <link href="http://tonylandis.com/atom.xml" rel="self"/>
+ <link href="http://tonylandis.com/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://henrik.nyh.se/</id>
+ <author>
+   <name>Tony Landis</name>
+   <email>tony@tonylandis.com</email>
+ </author>
+
+ {% for post in site.posts limit: 15 %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://tonylandis.com{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://tonylandis.com{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>
+
