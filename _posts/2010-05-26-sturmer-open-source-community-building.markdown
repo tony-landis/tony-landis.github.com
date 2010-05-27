@@ -5,6 +5,7 @@ title: Notes on Open Source Community Building by Matthias Stürmer
 tags:
 - oss
 - community
+- opensource
 ---
 
 Notes on Open Source Community Building by Matthias Stürmer
@@ -19,7 +20,7 @@ In addition to the subject matter, it was quite interesting to observe the evolu
 
 - A good community is one that is honestly __friendly__, highly __responsive__, composed of friendly, __altruistic__ members. 
 - Members must be able to put the interest of the community ahead of their personal interests.
-- Code committers should demonstrate __perseverance__ and the ablitity to __self-start__.
+- Code committers should demonstrate __perseverance__ and the ability to __self-start__.
 - It is ideal to keep the same members around for several years.
 - Open communication - discussions should happen in __public__ for all to participate in.
 - One exception to the open communication - discussion on who can be a committer.
@@ -47,7 +48,7 @@ In addition to the subject matter, it was quite interesting to observe the evolu
 - __Patience__, think with a long term perspective.
 - Personality and charm go a long way.
 - Allow people to work on what they want, how they want.
-- Keep the tone of communication polite, respectfull, solve communication conflicts.
+- Keep the tone of communication polite, respectful, solve communication conflicts.
 - Must be highly skilled in programming.
 
 “When you lose interest in a program, your last duty to it is to hand it off to a competent successor.“ - Raymond
@@ -69,7 +70,3 @@ In addition to the subject matter, it was quite interesting to observe the evolu
 “It’s always better if there is already code available instead of just ideas. In SourceForge there are many ideas that never catch on. If some code is already available it’s much easier to find people because usually nobody has time to study ideas and plans. You can’t submit patches for ideas. There are so many other things to do, so it must be attractive.” - Rothfuss
 
 “You should publish a software only when it’s quality is sufficient.” - Bühlmann
-
-
- 
-
