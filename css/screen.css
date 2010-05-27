@@ -19,7 +19,7 @@ body {
   background-color: white;
   font: 13.34px helvetica, arial, clean, sans-serif;
   *font-size: small;
-  text-align: center;
+  text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,6 +73,8 @@ ul.posts {
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
   }
+  
+  
 
 /*****************************************************************************/
 /*
@@ -82,7 +84,7 @@ ul.posts {
 
 .site {
   font-size: 110%;
-  text-align: justify;
+  text-align: left;
   width: 40em;
   margin: 3em auto 2em auto;
   line-height: 1.5em;
@@ -166,10 +168,6 @@ ul.posts {
     padding: .5em .4em .5em;
   }
 
-  #post ul,
-  #post ol {
-    margin-left: 1.25em;
-  }
 
   #post code {
     border: 1px solid #ddd;
@@ -226,3 +224,10 @@ ul.posts {
   hr {height:1px; color:#ccc; border:0; }
 
   .gist {font-size:80%;}
+  
+ #post ul, #post ol {
+    margin-left: 1.25em;
+  }
+  #post ul li:before {
+  	content: "\00BB \0020";
+	}
