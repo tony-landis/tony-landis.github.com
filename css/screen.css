@@ -205,6 +205,12 @@ ul.posts {
     border-left:12px solid #ddd;
   }
 
+  #post blockquote {
+    padding-left: 20px;
+    border-left:12px solid #ddd;
+    background: #f2f2f2;
+  }
+  
   strike, linethru {text-decoration:line-through;} 
 
   #post #tbl table { width:100%; margin-bottom:2em; }
