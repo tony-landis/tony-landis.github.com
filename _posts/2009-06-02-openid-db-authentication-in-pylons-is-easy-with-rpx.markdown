@@ -17,8 +17,6 @@ This tutorial actually covers more than just the subject of OpenID; it shows how
 
 I will assume you already have Pylons, SQLAlchemy, Mako, and MySQL installed, and will start by creating a new Pylons project project for this tutorial.
 
-<!--more-->
-
 At this point, I should explain the database schema I have in place for the users who will be able to login with a username/password combination. It is very simple - the USER table stores all the users and their a md5 of their password (for the sake of this tutorial only, you should probably use something more secure) and the USER_OPENID table stores OpenID user information.
 
 When a normal user (with a username/password in the USER table) attempts to login we will check against the USER table.
@@ -28,7 +26,9 @@ When a user logs in through OpenID, we will check against the USER_OPENID table 
 The 'acl' column in the USER table stores a string that identifies the access level of the user, such as 'admin', 'employee', 'customer', etc. You may want to change this column to an ENUM so the field is restricted to whatever your actual access level identities are. For example: enum('root','staff','customer')
 
 Here are the mysql explain results:
-<pre class="terminal"><code style="font-size:84%;">$ mysql&gt; explain user;
+
+{% highlight ruby %}
+$ mysql> explain user;
 +-----------+--------------+------+-----+---------+----------------+
 | Field     | Type         | Null | Key | Default | Extra          |
 +-----------+--------------+------+-----+---------+----------------+
@@ -42,7 +42,7 @@ Here are the mysql explain results:
 | ip        | varchar(16)  | YES  |     | NULL    |                |
 +-----------+--------------+------+-----+---------+----------------+
 
-$ mysql&gt; explain user_openid;
+$ mysql> explain user_openid;
 +-------------------+--------------+------+-----+---------+----------------+
 | Field             | Type         | Null | Key | Default | Extra          |
 +-------------------+--------------+------+-----+---------+----------------+
@@ -54,7 +54,9 @@ $ mysql&gt; explain user_openid;
 | providerName      | varchar(100) | YES  |     | NULL    |                |
 | identifier        | varchar(200) | YES  |     | NULL    |                |
 | email             | varchar(200) | YES  |     | NULL    |                |
-+-------------------+--------------+------+-----+---------+----------------+</code></pre>
++-------------------+--------------+------+-----+---------+----------------+
+{% endhighlight %}
+
 So let's get started by creating a database named 'pylons_openid', and create the tables. If you already have a user table, that you plan to use, that is fine, you will just need to modify the SQLAlchemy model so your columns match up. Here are the MySQL commands to create a database and tables and a few sample users:
  
 <script src="http://gist.github.com/122663.js"></script>
