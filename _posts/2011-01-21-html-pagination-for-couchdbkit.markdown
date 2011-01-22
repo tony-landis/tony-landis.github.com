@@ -9,7 +9,7 @@ Pagination Class for Couchdbkit Views
 
 
 When using [Pylons](http://pylonshq.com) and have found the
-[WebHelpers](http://pypi.python.org/pypi/WebHelpers) package to be very usefull.
+[WebHelpers](http://pypi.python.org/pypi/WebHelpers) package to be very useful.
 
 I have been using CouchDB and [Couchdbkit](http://couchdbkit.org/) and do miss
 the ability to use the WebHelpers pagination that I grew accustomed to using
