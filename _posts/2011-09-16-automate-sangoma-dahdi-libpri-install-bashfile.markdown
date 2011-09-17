@@ -9,11 +9,11 @@ Automate dahdi, libpri, Sangoma Wanpipe install on Debian Squeeze
 
 Sangoma has a helpful [install page for wanpipe/dahdi on Linux](http://wiki.sangoma.com/wanpipe-linux-asterisk-dahdi).
 
-This bask script will make things much simpler. I have tested it on Debian Squeeze 
+This bash script will make things much simpler. I have tested it on Debian Squeeze 
 but it should work on other releases as well. 
 
 {% highlight bash %}
-wget https://raw.github.com/gist/1223525/ae8f9e4553d7420ef4225c468f73ddfd365b0732/sangoma.sh | bash -
+curl https://raw.github.com/gist/1223525/ae8f9e4553d7420ef4225c468f73ddfd365b0732/sangoma.sh | bash -
 {% endhighlight %}
 
 Here is the full script. Feel free to change the version numbers or clone (the gist)[https://gist.github.com/1223525].
