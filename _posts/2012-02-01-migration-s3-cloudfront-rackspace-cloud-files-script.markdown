@@ -20,7 +20,7 @@ easy_install boto
 easy_install python_cloudfiles
 {% endhighlight %}
 
-Here is the migration. Feel free to change the version numbers or clone (the gist)[https://gist.github.com/1720032].
+Here is the migration. Feel free to change the version numbers or clone [the gist](https://gist.github.com/1720032).
 
 {% highlight python %}
 #!/usr/bin/python
